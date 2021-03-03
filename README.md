@@ -1,8 +1,8 @@
-# Ubuntu Server 20.04 LTS Autoinstaller configurations for K8s cluster
+# Ubuntu Server 20.04 LTS Autoinstaller configurations for bare metal K8s cluster
 
 Automating the OS installation of Ubuntu Server 20.04 LTS on a cluster of 4 Intel NUC machines requires two elements:
 
-- A web server holding cloud init configuration files for each machine
+- A local web server holding cloud init configuration files for each machine
 - An USB flash drive with the Ubuntu ISO and a modified `grub.cfg` file with menu entries for each machine
 
 More information at [https://ubuntu.com/server/docs/install/autoinstall-quickstart](https://ubuntu.com/server/docs/install/autoinstall-quickstart)
