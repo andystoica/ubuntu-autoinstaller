@@ -1,0 +1,40 @@
+#cloud-config
+autoinstall:
+  version: 1
+
+  locale: en_GB
+
+  keyboard:
+    layout: gb
+  
+  network:
+    version: 2
+    ethernets:
+      eno1:
+        dhcp4: true
+
+  apt:
+    preserve_sources_list: false
+    primary:
+    - arches: [amd64, i386]
+      uri: http://gb.archive.ubuntu.com/ubuntu
+    - arches: [default]
+      uri: http://ports.ubuntu.com/ubuntu-ports
+    geoip: true
+
+  storage:
+    layout:
+      name: direct
+    swap:
+      size: 0
+  
+  identity:
+    realname: Andy Stoica
+    username: andy
+    password: $6$7tB8.z2WMIR48Ics$7eax3cfh9wkhLsGVXHGSkRyjatrYKKxiLdnD9QtHACYHKofS0/A1CSy6Mt/8e3XwlUPPpy5tBKcGVA1JIwam.1
+    hostname: nucd
+
+  ssh:
+    install-server: true
+    allow-pw: true
+    authorized-keys: []
